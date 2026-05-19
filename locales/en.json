@@ -1,0 +1,27 @@
+{
+  "pair": {
+    "default_device_name": "FoxESS Inverter",
+    "title": "Set up your FoxESS inverter",
+    "subtitle": "Enter the FoxESS Cloud connection details for this device.",
+    "intro": "This app uses the FoxESS Cloud API key and your inverter serial number to poll live values into Homey.",
+    "fields": {
+      "name": "Device name",
+      "api_key": "FoxESS API key",
+      "serial_number": "Serial number",
+      "domain": "FoxESS API domain",
+      "poll_interval": "Poll interval in seconds"
+    },
+    "actions": {
+      "create": "Create device"
+    },
+    "errors": {
+      "required": "Please fill in the device name, API key and serial number.",
+      "poll_interval": "Poll interval must be at least 60 seconds."
+    }
+  },
+  "device": {
+    "errors": {
+      "missing_credentials": "Missing FoxESS API key or serial number in device settings."
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "foxess-cloud-homey-sdk3",
+  "version": "1.1.0",
+  "private": true,
+  "description": "FoxESS Cloud Homey SDK 3 app scaffold.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node --check app.js && node --check lib/foxess-client.js && node --check drivers/foxess_inverter/driver.js && node --check drivers/foxess_inverter/device.js"
+  }
+}

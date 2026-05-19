@@ -1,0 +1,105 @@
+{
+  "name": {
+    "en": "FoxESS Inverter"
+  },
+  "class": "other",
+  "icon": "/drivers/foxess_inverter/assets/icon.svg",
+  "images": {
+    "small": "/drivers/foxess_inverter/assets/images/small.png",
+    "large": "/drivers/foxess_inverter/assets/images/large.png",
+    "xlarge": "/drivers/foxess_inverter/assets/images/xlarge.png"
+  },
+  "capabilities": [
+    "measure_battery",
+    "measure_battery_soc",
+    "measure_battery_energy",
+    "measure_power_meter_2",
+    "measure_power",
+    "measure_power_battery_charge",
+    "measure_power_battery_discharge",
+    "measure_power_feedin",
+    "measure_power_grid_consumption",
+    "button_refresh_data"
+  ],
+  "capabilitiesOptions": {
+    "button_refresh_data": {
+      "maintenanceAction": true,
+      "title": {
+        "en": "Refresh now"
+      },
+      "desc": {
+        "en": "Request an immediate FoxESS poll."
+      }
+    }
+  },
+  "settings": [
+    {
+      "id": "api_key",
+      "type": "password",
+      "label": {
+        "en": "FoxESS API key"
+      },
+      "hint": {
+        "en": "The API key used to sign FoxESS Cloud requests."
+      },
+      "value": ""
+    },
+    {
+      "id": "serial_number",
+      "type": "text",
+      "label": {
+        "en": "Serial number"
+      },
+      "hint": {
+        "en": "The FoxESS inverter serial number."
+      },
+      "value": ""
+    },
+    {
+      "id": "domain",
+      "type": "text",
+      "label": {
+        "en": "FoxESS API domain"
+      },
+      "hint": {
+        "en": "Leave as default unless your FoxESS region uses a different endpoint."
+      },
+      "value": "https://www.foxesscloud.com"
+    },
+    {
+      "id": "poll_interval",
+      "type": "number",
+      "label": {
+        "en": "Poll interval (seconds)"
+      },
+      "hint": {
+        "en": "Minimum 60 seconds. Default 300."
+      },
+      "value": 300
+    },
+    {
+      "id": "battery_capacity_kwh",
+      "type": "number",
+      "label": {
+        "en": "Battery capacity (kWh)"
+      },
+      "hint": {
+        "en": "Used to estimate remaining battery energy from state of charge."
+      },
+      "value": 5.12
+    }
+  ],
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}
